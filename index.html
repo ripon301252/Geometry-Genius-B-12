@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Genius</title>
+
+    <!-- tailwind CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- daisyui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class=" mb-2 bg-[#e7f4fb] p-5">
+        <div class=" w-11/12 mx-auto flex justify-between items-center ">
+            <div>
+                <h1 class="text-2xl font-bold">Interactive</h1>
+                <p>Geometry Genius</p>
+            </div>
+            <div>
+                <button class="btn btn-primary">Blog</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class=" w-11/12 mx-auto p-5 grid md:grid-cols-12 gap-5 grid-cols-1">
+            <!--  Area Calculation   -->
+            <div class=" md:col-span-3 col-span-9  bg-white border-1 border-gray-100">
+                <h1 class="text-center text-2xl font-bold underline pt-5">Area Calculation</h1>
+                <div class="flex justify-between items-center mt-8 mb-5">
+                    <p class="font-bold text-xl ml-2">History</p>
+                    <div><button id="clear=btn" class=" mr-2 text-[12px] py-1 px-5 font-bold text-white rounded bg-gradient-to-r from-green-700 via-green-600 to-green-700 cursor-pointer">Clear</button></div>
+                </div>
+
+                <div id="area-history-calculate-container">
+                   
+                </div>
+            </div>
+
+            <div id="card-box" class="col-span-9 ">
+                <div class="grid md:grid-cols-3 gap-5  grid-cols-1">
+                    <!-- Triangle -->
+                    <div class="card bg-base-100 shadow-sm ">
+                        <figure class="px-5 pt-5">
+                            <img src="./img/triangle.png" alt="Shoes" class="" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h2 class="card-title ">Triangle</h2>
+                            <p>Area = 0.5 x b x h</p>
+                            <div class="flex gap-5 ">
+                                <div class="flex ml-5">
+                                    <div class=""><input
+                                            class="w-20  rounded text-center cursor-pointer font-bold text-lg bg-gray-200  outline-none border-none shadow-sm shadow-current sh"
+                                            type="text" placeholder="b">
+                                    </div>
+                                    <p class="ml-1 text-base font-bold">cm</p>
+                                </div>
+                                <div class="flex mr-5">
+                                    <div class=""><input
+                                            class="w-20  rounded text-center cursor-pointer font-bold text-lg bg-gray-200  outline-none border-none shadow-sm shadow-current sh"
+                                            type="text" placeholder="h">
+                                    </div>
+                                    <p class="ml-1 text-base font-bold">cm</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="mb-5 mx-5">
+                            <button class="btn btn-primary w-full calculate-btn">Calculate</button>
+                        </div>
+                    </div>
+                    <!-- Rectangle -->
+                    <div class="card bg-base-100 shadow-sm ">
+                        <figure class="px-5 pt-5">
+                            <img src="./img/rectangle.png" alt="Shoes" class="" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h2 class="card-title mt-10">Rectangle</h2>
+                            <p>Area = w x l</p>
+                            <div class="flex gap-5 ">
+                                <div class="flex ml-5">
+                                    <div class=""><input
+                                            class="w-20  rounded text-center cursor-pointer font-bold text-lg bg-gray-200  outline-none border-none shadow-sm shadow-current sh"
+                                            type="text" placeholder="w">
+                                    </div>
+                                    <p class="ml-1 text-base font-bold">cm</p>
+                                </div>
+                                <div class="flex mr-5">
+                                    <div class=""><input
+                                            class="w-20  rounded text-center cursor-pointer font-bold text-lg bg-gray-200  outline-none border-none shadow-sm shadow-current sh"
+                                            type="text" placeholder="l">
+                                    </div>
+                                    <p class="ml-1 text-base font-bold">cm</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="mb-5 mx-5">
+                            <button class="btn btn-primary w-full calculate-btn">Calculate</button>
+                        </div>
+                    </div>
+                    <!-- Parallelogram -->
+                    <div class="card bg-base-100 shadow-sm ">
+                        <figure class="px-5 pt-5">
+                            <img src="./img/parallelogram.png" alt="Shoes" class="" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h2 class="card-title mt-14">Parallelogram</h2>
+                            <p>Area = b x h</p>
+                            <div class="flex gap-5 ">
+                                <div class="flex ml-5">
+                                    <div class=""><input
+                                            class="w-20  rounded text-center cursor-pointer font-bold text-lg bg-gray-200  outline-none border-none shadow-sm shadow-current sh"
+                                            type="text" placeholder="b">
+                                    </div>
+                                    <p class="ml-1 text-base font-bold">cm</p>
+                                </div>
+                                <div class="flex mr-5">
+                                    <div class=""><input
+                                            class="w-20  rounded text-center cursor-pointer font-bold text-lg bg-gray-200  outline-none border-none shadow-sm shadow-current sh"
+                                            type="text" placeholder="h">
+                                    </div>
+                                    <p class="ml-1 text-base font-bold">cm</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="mb-5 mx-5">
+                            <button class="btn btn-primary w-full calculate-btn">Calculate</button>
+                        </div>
+                    </div>
+                    <!-- Rhombus -->
+                    <div class="card bg-base-100 shadow-sm ">
+                        <figure class="px-5 pt-5">
+                            <img src="./img/rhombus.png" alt="Shoes" class="" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h2 class="card-title">Rhombus</h2>
+                            <p>Area = 0.5 x d1 x d2</p>
+                            <div class="flex gap-5 ">
+                                <div class="flex ml-5">
+                                    <div class=""><input
+                                            class="w-20  rounded text-center cursor-pointer font-bold text-lg bg-gray-200  outline-none border-none shadow-sm shadow-current sh"
+                                            type="text" placeholder="d1">
+                                    </div>
+                                    <p class="ml-1 text-base font-bold">cm</p>
+                                </div>
+                                <div class="flex mr-5">
+                                    <div class=""><input
+                                            class="w-20  rounded text-center cursor-pointer font-bold text-lg bg-gray-200  outline-none border-none shadow-sm shadow-current sh"
+                                            type="text" placeholder="d2">
+                                    </div>
+                                    <p class="ml-1 text-base font-bold">cm</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="mb-5 mx-5">
+                            <button class="btn btn-primary w-full calculate-btn">Calculate</button>
+                        </div>
+                    </div>
+                    <!-- Pentagon -->
+                    <div class="card bg-base-100 shadow-sm ">
+                        <figure class="px-5 pt-5">
+                            <img src="./img/pentagon.png" alt="Shoes" class="rounded-xl" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h2 class="card-title">Pentagon</h2>
+                            <p>Area = 0.5 x p x b</p>
+                            <div class="flex gap-5 ">
+                                <div class="flex ml-5">
+                                    <div class=""><input id="input-1"
+                                            class="w-20  rounded text-center cursor-pointer font-bold text-lg bg-gray-200  outline-none border-none shadow-sm shadow-current sh"
+                                            type="text" placeholder="p">
+                                    </div>
+                                    <p class="ml-1 text-base font-bold">cm</p>
+                                </div>
+                                <div class="flex mr-5">
+                                    <div class=""><input id="input-2"
+                                            class="w-20  rounded text-center cursor-pointer font-bold text-lg bg-gray-200  outline-none border-none shadow-sm shadow-current sh"
+                                            type="text" placeholder="b">
+                                    </div>
+                                    <p class="ml-1 text-base font-bold">cm</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="mb-5 mx-5">
+                            <button class="btn btn-primary w-full calculate-btn">Calculate</button>
+                        </div>
+                    </div>
+                    <!-- Ellipse -->
+                    <div class="card bg-base-100 shadow-sm ">
+                        <figure class="px-5 pt-5">
+                            <img src="./img/ellipse.png" alt="Shoes" class="rounded-xl" />
+                        </figure>
+                        <div class="card-body items-center text-center">
+                            <h2 class="card-title mt-8">Ellipse</h2>
+                            <p>Area = 3.14 x a x b</p>
+                            <div class="flex gap-5 ">
+                                <div class="flex ml-5">
+                                    <div class=""><input
+                                            class="w-20  rounded text-center cursor-pointer font-bold text-lg bg-gray-200  outline-none border-none shadow-sm shadow-current sh"
+                                            type="text" placeholder="a">
+                                    </div>
+                                    <p class="ml-1 text-base font-bold">cm</p>
+                                </div>
+                                <div class="flex mr-5">
+                                    <div class=""><input
+                                            class="w-20  rounded text-center cursor-pointer font-bold text-lg bg-gray-200  outline-none border-none shadow-sm shadow-current sh"
+                                            type="text" placeholder="b">
+                                    </div>
+                                    <p class="ml-1 text-base font-bold">cm</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="mb-5 mx-5">
+                            <button class="btn btn-primary w-full calculate-btn">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </main>
+
+
+
+
+
+
+
+<!-- script js -->
+ <script src="area.js"></script>
+
+
+</body>
+
+</html>
