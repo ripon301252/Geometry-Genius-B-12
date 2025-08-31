@@ -6,10 +6,11 @@ document.getElementById('card-box').addEventListener('click', function(e){
 
         const calculateBtn = e.target
 
-        const areaName = calculateBtn.parentNode.parentNode.children[1].children[0].innerText
+        const areaName = calculateBtn.parentNode.parentNode.children[1].children[0].innerText;
         const input1 = calculateBtn.parentNode.parentNode.children[1].children[2].children[0].children[0].children[0].value;
         const input2 = calculateBtn.parentNode.parentNode.children[1].children[2].children[1].children[0].children[0].value;
-        const area1 = 0.5 * input1 * input2;
+        const number = calculateBtn.parentNode.parentNode.children[1].children[1].children[0].innerText;
+        const area = number * input1 * input2;
         
 
         const areaHistoryCalculateContainer = document.getElementById('area-history-calculate-container');
@@ -19,7 +20,7 @@ document.getElementById('card-box').addEventListener('click', function(e){
         newAreaHistoryCalculateContainer1.innerHTML = `
             
             <div class="bg-white border-1 border-gray-100 mx-5 p-5 rounded shadow-md font-bold text-lg mt-2">
-                <h1>${areaName} Area = ${area1}</h1>
+                <h1>${areaName} Area = ${area} cm</h1>
             </div>
             `
 
@@ -44,7 +45,8 @@ document.getElementById('card-box').addEventListener('click', function(e){
 //         const areaName = calculateBtn.parentNode.parentNode.children[1].children[0].innerText
 //         const input1 = calculateBtn.parentNode.parentNode.children[1].children[2].children[0].children[0].children[0].value;
 //         const input2 = calculateBtn.parentNode.parentNode.children[1].children[2].children[1].children[0].children[0].value;
-//         const area1 = 0.5 * input1 * input2;
+//         const number = calculateBtn.parentNode.parentNode.children[1].children[1].children[0].innerText;    
+//         const area = number * input1 * input2;
         
 
 //         const areaHistoryCalculateContainer = document.getElementById('area-history-calculate-container');
@@ -54,7 +56,7 @@ document.getElementById('card-box').addEventListener('click', function(e){
 //         newAreaHistoryCalculateContainer1.innerHTML = `
             
 //             <div class="bg-white border-1 border-gray-100 mx-5 p-5 rounded shadow-md font-bold text-lg mt-2">
-//                 <h1>${areaName} Area = ${area1}</h1>
+//                 <h1>${areaName} Area = ${area} cm</h1>
 //             </div>
 //             `
 
